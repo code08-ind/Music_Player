@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fc466b;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f5efb, #fc466b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.music_container {
+  width: 400px;
+  display: flex;
+  margin: 30px auto;
+  margin-top: 20px;
+  padding: 30px 50px 70px 50px;
+  flex-direction: column;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 17px 12px rgba(2, 233, 41, 0.315);
+  -webkit-box-shadow: 0px 0px 17px 12px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 0px 17px 12px rgba(0, 0, 0, 0.29);
+}
+
+.music_container h2 {
+  margin: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  word-spacing: 3px;
+  text-shadow: 2px 2px 4px gray;
+  font-family: "Newsreader", serif;
+}
+
+.music_container h4 {
+  margin: 10px;
+  font-size: 24px;
+  letter-spacing: 2.5px;
+  word-spacing: 3px;
+  font-weight: 300;
+  color: #aaaaaa;
+  font-family: "Jost", sans-serif;
+}
+
+.music_container div.img_container img {
+  width: 210px;
+  height: 210px;
+  margin-top: 15px;
+  box-shadow: 4px 6px 25px 7px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: 4px 6px 25px 7px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 4px 6px 25px 7px rgba(0, 0, 0, 0.71);
+  margin-bottom: -25px;
+  border-radius: 105px;
+}
+
+.music_container audio {
+  display: none;
+}
+
+.music_container .progressbar_container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.music_container .progressbar_container div.progress_duration_meter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  justify-content: space-between;
+}
+
+.music_container .progressbar_container div.progress_div {
+  width: 100%;
+  height: 5px;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 5px;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  cursor: pointer;
+  margin-bottom: -40px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  appearance: none;
+}
+
+.music_container .progressbar_container div.progress_div div.progress {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: #00daf7;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.23);
+  appearance: none;
+}
+
+.music_container div.music_controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 45px;
+}
+
+.music_container div.music_controls i {
+  padding: 5px 30px;
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+.music_container div.music_controls i:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.music_container div.music_controls i#play {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 20px 22px;
+  color: white;
+  background-color: black;
+}
+
+.music_container div.music_controls i#play:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 4px 2px 20px 7px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 4px 2px 20px 7px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 4px 2px 20px 7px rgba(0, 0, 0, 0.41);
+}
+
+.music_container h6 {
+  margin-top: 40px;
+  margin-bottom: -40px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+}
+
+.anime {
+  animation: rotatePlayer 3s linear infinte normal forwards;
+}
+
+.progress_container {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+@media (max-width: 960px) and (min-width: 320px) {
+  .music_container {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 360px) {
+  .music_container {
+    width: 340px;
+  }
+}
+
+@media (max-width: 359px) and (min-width: 320px) {
+  .music_container {
+    width: 318px;
+  }
+}
+
+@keyframes rotatePlayer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
